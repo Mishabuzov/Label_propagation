@@ -1,0 +1,8 @@
+
+/.idea/
+/*.csv
+/target/*
+/project/*
+/hadoop/*
+/data/*.txt
+/venv/
