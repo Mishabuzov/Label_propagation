@@ -2,7 +2,7 @@
 /.idea/
 /*.csv
 /target/*
-/project/*
+/project/target/*
 /hadoop/*
 /data/*.txt
 /venv/
