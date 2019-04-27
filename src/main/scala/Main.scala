@@ -1,6 +1,3 @@
-import java.io.File
-
-import breeze.linalg.csvwrite
 import org.apache.spark.sql.SparkSession
 
 object Main {
@@ -17,14 +14,15 @@ object Main {
 
     val helper = new EdgesHelper(session)
 
-    val trainData = helper.loadEdges(args(0))
+    //    val trainData = helper.loadEdges(args(0))
 
-    // JUST CHECKING THAT READING IS OK!
-    // REmove after done.
-    println(trainData.count())
-    trainData.take(100).foreach(println)
+    val graph = helper.loadGraph(args(0))
 
-    //    csvwrite(new File("emb_in.csv"), embIn, separator = ',')
+    graph.edges.take(100).foreach(println(_)) //JUST CHECKING THAT READING IS OK!
+
+
+    //    println(trainData.count())
+    //    trainData.take(100).foreach(println)
 
   }
 }

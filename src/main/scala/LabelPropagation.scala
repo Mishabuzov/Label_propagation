@@ -1,4 +1,3 @@
-import breeze.linalg.DenseMatrix
 import org.apache.spark.rdd.RDD
 
 class LabelPropagation {
